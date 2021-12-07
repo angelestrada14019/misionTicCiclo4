@@ -1,0 +1,365 @@
+{
+	"info": {
+		"_postman_id": "8a0ca763-0109-40c6-9d47-c4e3efbc65da",
+		"name": "api-stock",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "cargo",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/cargo",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"cargo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/cargo/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"cargo",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"nombre\": \"tecnico\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/cargo",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"cargo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": 4,\r\n        \"nombre\": \"mantenimiento\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/cargo",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"cargo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delet",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/cargo/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"cargo",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "proveedor",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/proveedor",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"proveedor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/proveedor/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"proveedor",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"nombre\": \"tecnico\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/proveedor",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"proveedor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": 4,\r\n        \"nombre\": \"mantenimiento\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/proveedor",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"proveedor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delet",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/proveedor/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"proveedor",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "categoria",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/categoria",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"categoria"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/categoria/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"categoria",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "importancia",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/importancia",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"importancia"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/importancia/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"importancia",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "dependencia",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/dependencia",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"dependencia"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/dependencia/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"dependencia",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
