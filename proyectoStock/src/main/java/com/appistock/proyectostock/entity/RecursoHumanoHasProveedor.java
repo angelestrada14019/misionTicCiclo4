@@ -26,4 +26,7 @@ public class RecursoHumanoHasProveedor {
     @JoinColumn(name = "proveedor_id",nullable = false,updatable = false,referencedColumnName = "id")
     private Proveedor proveedorId;
 
+    @Column(name = "mensaje",nullable = true,length = 300)
+    private String mensaje;
+
 }

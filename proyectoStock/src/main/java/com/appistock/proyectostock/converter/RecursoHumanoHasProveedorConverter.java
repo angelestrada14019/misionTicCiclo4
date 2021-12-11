@@ -10,6 +10,7 @@ public class RecursoHumanoHasProveedorConverter extends AbstractConverter<Recurs
                 .id(entity.getId())
                 .recursohumanoId(entity.getRecursohumanoId())
                 .proveedorId(entity.getProveedorId())
+                .mensaje(entity.getMensaje())
                 .build();
     }
 
@@ -19,6 +20,7 @@ public class RecursoHumanoHasProveedorConverter extends AbstractConverter<Recurs
                 .id(dto.getId())
                 .recursohumanoId(dto.getRecursohumanoId())
                 .proveedorId(dto.getProveedorId())
+                .mensaje(dto.getMensaje())
                 .build();
     }
 }

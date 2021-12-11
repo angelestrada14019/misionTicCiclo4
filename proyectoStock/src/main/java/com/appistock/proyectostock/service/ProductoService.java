@@ -75,7 +75,6 @@ public class ProductoService {
             Producto objProducto = productoRepository.findById(producto.getId())
                     .orElseThrow(() -> new NoDataFoundExceptions("no existe el producto con el id: " + producto.getId()));
             objProducto.setNombre(producto.getNombre());
-            objProducto.setCantidad(producto.getCantidad());
             objProducto.setPrecio(producto.getPrecio());
             objProducto.setDescripcion(producto.getDescripcion());
             objProducto.setSerial(producto.getSerial());

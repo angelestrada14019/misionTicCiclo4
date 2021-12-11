@@ -82,6 +82,7 @@ public class RecursoHumanoHasProveedorService {
                     .orElseThrow(() -> new NoDataFoundExceptions("no existe el id: " + recursoHumanoHasProveedor.getId()));
             objRecursoHumanoHasProveedor.setProveedorId(recursoHumanoHasProveedor.getProveedorId());
             objRecursoHumanoHasProveedor.setRecursohumanoId(recursoHumanoHasProveedor.getRecursohumanoId());
+            objRecursoHumanoHasProveedor.setMensaje(recursoHumanoHasProveedor.getMensaje());
             recursohumanoHasProveedorRepository.save(objRecursoHumanoHasProveedor);
             return objRecursoHumanoHasProveedor;
 

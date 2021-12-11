@@ -13,7 +13,7 @@ public class ProductoDto {
 
     private Long id;
     private String nombre;
-    private Long cantidad;
+
     private String descripcion;
     private Double precio;
     private String serial;

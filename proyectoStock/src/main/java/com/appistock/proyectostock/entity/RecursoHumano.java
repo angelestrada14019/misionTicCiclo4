@@ -27,7 +27,7 @@ public class RecursoHumano {
     @Column(name = "email",nullable = false,length = 60)
     private String email;
 
-    @Column(name = "contrasenia",nullable = false,length = 100)
+    @Column(name = "contrasenia",nullable = false,length = 200)
     private String contrasenia;
 
     @ManyToOne(fetch = FetchType.EAGER)

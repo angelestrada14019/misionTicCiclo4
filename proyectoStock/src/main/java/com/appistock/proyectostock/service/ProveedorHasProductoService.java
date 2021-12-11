@@ -78,6 +78,7 @@ public class ProveedorHasProductoService {
                     .orElseThrow(() -> new NoDataFoundExceptions("no existe el id: " + proveedorHasProducto.getId()));
             objProveedorHasProducto.setProveedorId(proveedorHasProducto.getProveedorId());
             objProveedorHasProducto.setProductoId(proveedorHasProducto.getProductoId());
+            objProveedorHasProducto.setCantidad(proveedorHasProducto.getCantidad());
             proveedorHasProductoRepository.save(objProveedorHasProducto);
             return objProveedorHasProducto;
 

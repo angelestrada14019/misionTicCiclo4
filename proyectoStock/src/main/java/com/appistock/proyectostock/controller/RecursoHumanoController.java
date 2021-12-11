@@ -3,6 +3,9 @@ package com.appistock.proyectostock.controller;
 
 import com.appistock.proyectostock.converter.RecursoHumanoConverter;
 
+import com.appistock.proyectostock.dtos.LoginRequestDto;
+import com.appistock.proyectostock.dtos.LoginResponseProveedorDto;
+import com.appistock.proyectostock.dtos.LoginResponseRecursoHumanoDto;
 import com.appistock.proyectostock.dtos.RecursoHumanoDto;
 
 import com.appistock.proyectostock.entity.RecursoHumano;
@@ -63,6 +66,20 @@ public class RecursoHumanoController {
     public ResponseEntity<WrapperResponse<Void>> delete(@PathVariable("Id") Long id) {
         recursohumanoService.delete(id);
         return new WrapperResponse<Void>(true,"Delete Succes",null).createResponse(HttpStatus.OK);
+
+    }
+    @PostMapping("/signUp_R")
+    public ResponseEntity<WrapperResponse<RecursoHumanoDto>> signUp(@RequestBody RecursoHumanoDto recursoHumanoDto) {
+        RecursoHumano objRecursoHumano = recursohumanoService.signUp(recursoHumanoConverter.fromDto(recursoHumanoDto));
+        RecursoHumanoDto objRecursoHumanoDto=recursoHumanoConverter.fromEntity(objRecursoHumano);
+        return new WrapperResponse<>(true,"Create Succes",objRecursoHumanoDto).createResponse(HttpStatus.CREATED);
+
+
+    }
+    @PostMapping("/login_R")
+    public ResponseEntity<WrapperResponse<LoginResponseRecursoHumanoDto>> login(@RequestBody LoginRequestDto loginRequestDto) {
+        LoginResponseRecursoHumanoDto loginResponseRecursoHumanoDto=recursohumanoService.login(loginRequestDto);
+        return new WrapperResponse<>(true,"Create Succes",loginResponseRecursoHumanoDto).createResponse(HttpStatus.CREATED);
 
     }
 }

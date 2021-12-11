@@ -20,9 +20,6 @@ public class Producto {
     @Column(name = "nombre",nullable = false,length = 100)
     private String nombre;
 
-    @Column(name = "cantidad",nullable = false)
-    private Long cantidad;
-
     @Column(name = "descripcion",nullable = false,length = 200)
     private String descripcion;
 

@@ -10,7 +10,7 @@ public class ProductoConverter extends AbstractConverter<Producto, ProductoDto> 
                 .id(entity.getId())
                 .nombre(entity.getNombre())
                 .descripcion(entity.getDescripcion())
-                .cantidad(entity.getCantidad())
+
                 .precio(entity.getPrecio())
                 .serial(entity.getSerial())
                 .build();
@@ -22,7 +22,7 @@ public class ProductoConverter extends AbstractConverter<Producto, ProductoDto> 
                 .id(dto.getId())
                 .nombre(dto.getNombre())
                 .descripcion(dto.getDescripcion())
-                .cantidad(dto.getCantidad())
+
                 .precio(dto.getPrecio())
                 .serial(dto.getSerial())
                 .build();

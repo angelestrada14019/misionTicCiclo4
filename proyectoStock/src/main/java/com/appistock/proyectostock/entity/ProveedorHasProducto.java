@@ -26,4 +26,7 @@ public class ProveedorHasProducto {
     @JoinColumn(name = "producto_id",nullable = false,updatable = false,referencedColumnName = "id")
     private Producto productoId;
 
+    @Column(name = "cantidad",nullable = false)
+    private Long cantidad;
+
 }

@@ -32,14 +32,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8081/cargo/4",
+							"raw": "localhost:8081/cargo/7",
 							"host": [
 								"localhost"
 							],
 							"port": "8081",
 							"path": [
 								"cargo",
-								"4"
+								"7"
 							]
 						}
 					},
@@ -127,7 +127,13 @@
 					"name": "findAll",
 					"request": {
 						"method": "GET",
-						"header": [],
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJyQGguY29tIiwiaWF0IjoxNjM5MjA4Nzc4LCJleHAiOjE2MzkyMTIzNzh9.-mfzlAYUwEojQLagCab3b7zWMeFs8osJxQ0uCBtioMNAj1xl8szAuiN5wE_I1371-bQ1-Jy_kBNHFGsipQMaUg",
+								"type": "text"
+							}
+						],
 						"url": {
 							"raw": "localhost:8081/proveedor",
 							"host": [
@@ -147,14 +153,14 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "localhost:8081/proveedor/1",
+							"raw": "localhost:8081/proveedor/4",
 							"host": [
 								"localhost"
 							],
 							"port": "8081",
 							"path": [
 								"proveedor",
-								"1"
+								"4"
 							]
 						}
 					},
@@ -228,6 +234,235 @@
 							"path": [
 								"proveedor",
 								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signUp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \r\n            \"descripcion\": \"comida\",\r\n            \"email\": \"c@h.com\",\r\n            \"contrasenia\": \"123456\",\r\n            \"categoriaId\": {\r\n                \"id\": 1                \r\n            },\r\n            \"dependenciaId\": {\r\n                \"id\": 1                \r\n            },\r\n            \"importanciaId\": {\r\n                \"id\": 1\r\n            }\r\n        }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/signUp_P",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"signUp_P"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"r@h.com\",\r\n    \"contrasenia\":\"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/login_P",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"login_P"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "recurso_humano",
+			"item": [
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhQGUuY29tIiwianRpIjoiMiIsImlhdCI6MTYzOTIwODkzOSwiZXhwIjoxNjM5MjEyNTM5fQ.tBMkKC1gzSaTqW4FTuU8clovkc-ql_B9SZkIbTQYoFIvW8IQMHfD5HzgErRm4YJ_OROMp9zJEWJ_tElzVJv8cQ",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8081/recurso_humano",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"recurso_humano"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/recurso_humano/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"recurso_humano",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"nombre\": \"tecnico\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/recurso_humano",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"recurso_humano"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": 4,\r\n        \"nombre\": \"mantenimiento\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/recurso_humano",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"recurso_humano"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delet",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8081/recurso_humano/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"recurso_humano",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signUp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \r\n            \"nombre\": \"angel\",\r\n            \"apellido\": \"estrada\",\r\n            \"email\": \"a@e.com\",\r\n            \"contrasenia\": \"123456\",\r\n            \"cargoId\": {\r\n                \"id\": 1\r\n            }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/signUp_R",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"signUp_R"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"a@e.com\",\r\n    \"contrasenia\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8081/login_R",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"login_R"
 							]
 						}
 					},

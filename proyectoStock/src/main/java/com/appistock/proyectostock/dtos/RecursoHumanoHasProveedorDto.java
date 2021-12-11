@@ -16,5 +16,6 @@ public class RecursoHumanoHasProveedorDto {
     private RecursoHumano recursohumanoId;
 
     private Proveedor proveedorId;
+    private String mensaje;
 
 }

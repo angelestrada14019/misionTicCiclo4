@@ -3,6 +3,8 @@ package com.appistock.proyectostock.controller;
 
 import com.appistock.proyectostock.converter.ProveedorConverter;
 
+import com.appistock.proyectostock.dtos.LoginRequestDto;
+import com.appistock.proyectostock.dtos.LoginResponseProveedorDto;
 import com.appistock.proyectostock.dtos.ProveedorDto;
 
 import com.appistock.proyectostock.entity.Proveedor;
@@ -46,8 +48,6 @@ public class ProveedorController {
         Proveedor objProveedor = proveedorService.create(proveedorConverter.fromDto(proveedorDto));
         ProveedorDto objProveedorDto=proveedorConverter.fromEntity(objProveedor);
         return new WrapperResponse<>(true,"Create Succes",objProveedorDto).createResponse(HttpStatus.CREATED);
-
-
     }
 
     @PutMapping("/proveedor")
@@ -64,5 +64,17 @@ public class ProveedorController {
         proveedorService.delete(id);
         return new WrapperResponse<Void>(true,"Delete Succes",null).createResponse(HttpStatus.OK);
 
+    }
+
+    @PostMapping("/signUp_P")
+    public ResponseEntity<WrapperResponse<ProveedorDto>> signUp(@RequestBody ProveedorDto proveedorDto) {
+        Proveedor objProveedor = proveedorService.signUp(proveedorConverter.fromDto(proveedorDto));
+        ProveedorDto objProveedorDto=proveedorConverter.fromEntity(objProveedor);
+        return new WrapperResponse<>(true,"Create Succes",objProveedorDto).createResponse(HttpStatus.CREATED);
+    }
+    @PostMapping("/login_P")
+    public ResponseEntity<WrapperResponse<LoginResponseProveedorDto>> login(@RequestBody LoginRequestDto loginRequestDto) {
+        LoginResponseProveedorDto loginResponseProveedorDto=proveedorService.login(loginRequestDto);
+        return new WrapperResponse<>(true,"Ha iniciado sesión",loginResponseProveedorDto).createResponse(HttpStatus.CREATED);
     }
 }

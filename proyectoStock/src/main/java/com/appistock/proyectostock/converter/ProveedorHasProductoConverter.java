@@ -11,6 +11,7 @@ public class ProveedorHasProductoConverter extends AbstractConverter<ProveedorHa
                 .id(entity.getId())
                 .productoId(entity.getProductoId())
                 .proveedorId(entity.getProveedorId())
+                .cantidad(entity.getCantidad())
                 .build();
     }
 
@@ -20,6 +21,7 @@ public class ProveedorHasProductoConverter extends AbstractConverter<ProveedorHa
                 .id(dto.getId())
                 .productoId(dto.getProductoId())
                 .proveedorId(dto.getProveedorId())
+                .cantidad(dto.getCantidad())
                 .build();
     }
 }
